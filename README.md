@@ -1,12 +1,13 @@
 # Self-Collision Avoidance
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
 
-[![Build Status](https://jenkins.platform.dev.nuxeo.com/buildStatus/icon?job=nuxeo/nuxeo/master)](https://jenkins.platform.dev.nuxeo.com/job/nuxeo/job/nuxeo/job/master/)
 
-Tested/Build on UBUNTU 18.04.
+## Prerequisites
+Build and test on UBUNTU 18.04.
 
 ## Installation
 
-Please install [ros-melodic Desktop-Full Install (since Gazebo is required as well)](http://wiki.ros.org/melodic/Installation/Ubuntu),  [moveit! (Moveit! 1 melodic)](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html) in advance.  
+Please install [ros-melodic Desktop-Full Install](http://wiki.ros.org/melodic/Installation/Ubuntu) (since Gazebo is required as well),  [moveit! (Moveit! 1 melodic)](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html) in advance.  
 
 
 ## Building
@@ -59,12 +60,12 @@ source ./devel/setup.bash
 ```
 
 
+<!-- CONTACT -->
+### Contact
 
-### Reporting Issues
+Sheldan Chen - email@hkpc.org
 
-You can follow the developments in the [Nuxeo Platform](https://jira.nuxeo.com/browse/NXP/) project of our JIRA bug tracker.
+Project Link: [https://github.com/SheldanChen/test_sheldan.git](https://github.com/SheldanChen/test_sheldan.git)
 
-You can report issues on [answers.nuxeo.com](http://answers.nuxeo.com).
-
-## Licensing
+<p align="right">(<a href="#top">back to top</a>)</p>
 
