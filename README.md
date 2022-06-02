@@ -65,7 +65,7 @@ source ./devel/setup.bash
 
 Sheldan Chen - email@hkpc.org
 
-Project Link: [https://github.com/SheldanChen/test_sheldan.git](https://github.com/SheldanChen/test_sheldan.git)
+Project Link: [https://github.com/SheldanChen/ws_ur10_s.git](https://github.com/SheldanChen/ws_ur10_s.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
