@@ -22,12 +22,12 @@ Building workspace requires the following tools:
 Get the source code:
 
 ```shell
-git clone git@github.com:SheldanChen/test_sheldan.git
-cd test_sheldan
+git clone git@github.com:SheldanChen/ws_ur10_s.git
+cd ws_ur10_s
 ```
 
 
-To build everything, including the packages, /build file, /devel file, run in /test_sheldan:
+To build everything, including the packages, /build file, /devel file, run in /ws_ur10_s:
 
 ```shell
 catkin_make
@@ -54,7 +54,7 @@ If you want to control the robot through command lines, you can launch the simul
 ```shell
 roslaunch combination gazebo.launch
 ```
-and then open another terminal in /test_sheldan:
+and then open another terminal in /ws_ur10_s:
 ```shell
 source ./devel/setup.bash
 ```
