@@ -3,7 +3,7 @@
 
 
 ## Prerequisites
-Build and test on UBUNTU 18.04.
+Build and test on Ubuntu 18.04.
 
 ## Installation
 
