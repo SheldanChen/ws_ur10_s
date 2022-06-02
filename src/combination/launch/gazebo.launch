@@ -1,0 +1,52 @@
+<launch>
+
+    <param name="robot_description" textfile="$(find combination)/urdf/combination.urdf" />
+
+    <include
+      file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+    <node
+      name="tf_footprint_base"
+      pkg="tf"
+      type="static_transform_publisher"
+      args="0 0 0 0 0 0 base_link base_footprint 40" />
+
+    <node
+      name="spawn_model"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      args="-urdf -param robot_description -model combination"
+      output="screen" />
+
+    <node
+      name="fake_joint_calibration"
+      pkg="rostopic"
+      type="rostopic"
+      args="pub /calibrated std_msgs/Bool true" />
+
+    <!-- Load controllers -->
+    <rosparam command="load" file="$(find combination)/config/joints.yaml"  ns="/combination" />
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner"
+      respawn="false" output="screen" ns="/combination"
+      args="--namespace=/combination
+      joint_state_controller
+      joint1_position_controller
+      joint2_position_controller
+      joint3_position_controller
+      joint4_position_controller
+      joint5_position_controller
+      joint6_position_controller
+      --timeout 60" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+      respawn="false" output="screen">
+      <param name="robot_description" textfile="$(find combination)/urdf/combination.urdf" />
+      <remap from="/joint_states" to="/combination/joint_states" />
+    </node>
+
+    <!-- <node pkg="robot_state_publisher" type="robot_state_publisher"  name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="30.0" />
+    </node> -->
+
+</launch>

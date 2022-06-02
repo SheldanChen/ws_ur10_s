@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="combination">
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/combination</robotNamespace>
+    </plugin>
+  </gazebo>
+  <link name="world">
+  </link>
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="7.37931935394108E-06 -0.000475142478554004 0.018439017892027"
+        rpy="0 0 0" />
+      <mass
+        value="0.709215089186384" />
+      <inertia
+        ixx="0.00115586778389477"
+        ixy="4.76210921883884E-08"
+        ixz="7.97269592535512E-08"
+        iyy="0.00114634212515932"
+        iyz="2.07271572898755E-07"
+        izz="0.00212931958576209" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="world_base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    </joint>
+  <link
+    name="joint_1">
+    <inertial>
+      <origin
+        xyz="7.67305519609881E-06 0.0116177835329399 -0.0114454182654446"
+        rpy="0 0 0" />
+      <mass
+        value="3.07721535328458" />
+      <inertia
+        ixx="0.01075086496246"
+        ixy="-1.32535236034976E-06"
+        ixz="-4.83433003182714E-08"
+        iyy="0.0100374841136376"
+        iyz="-0.00104422148169352"
+        izz="0.0100847609730903" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.882352941176471 0.882352941176471 0.882352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.128"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="joint_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="330.0" lower="-6.2831853" upper="6.2831853" velocity="2.16"/>
+  </joint>
+  <link
+    name="joint_2">
+    <inertial>
+      <origin
+        xyz="8.39495534339188E-05 0.250745974283906 0.00563372269131107"
+        rpy="0 0 0" />
+      <mass
+        value="8.71681022341746" />
+      <inertia
+        ixx="0.0952626099900606"
+        ixy="4.23627566007177E-07"
+        ixz="-3.08766556581469E-07"
+        iyy="0.0187317746215777"
+        iyz="0.000754738812287678"
+        izz="0.0948533789000811" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.882352941176471 0.882352941176471 0.882352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.176 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="joint_1" />
+    <child
+      link="joint_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="330.0" lower="-6.2831853" upper="6.2831853" velocity="2.16"/>
+  </joint>
+  <link
+    name="joint_3">
+    <inertial>
+      <origin
+        xyz="-2.3154E-06 0.25687 -0.0032009"
+        rpy="0 0 0" />
+      <mass
+        value="4.6569" />
+      <inertia
+        ixx="0.051345"
+        ixy="7.8014E-07"
+        ixz="1.6536E-07"
+        iyy="0.0056147"
+        iyz="-0.00016819"
+        izz="0.051404" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.88235 0.88235 0.88235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.6127 0.12781"
+      rpy="0 0 0" />
+    <parent
+      link="joint_2" />
+    <child
+      link="joint_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="150.0" lower="-6.2831853" upper="6.2831853" velocity="3.15"/>
+  </joint>
+  <link
+    name="joint_4">
+    <inertial>
+      <origin
+        xyz="6.95080302738576E-06 0.00967015845632946 0.00760235560710798"
+        rpy="0 0 0" />
+      <mass
+        value="0.729547644259479" />
+      <inertia
+        ixx="0.000987732226145021"
+        ixy="-9.35585559460883E-08"
+        ixz="-1.03665487001708E-07"
+        iyy="0.000878007312535541"
+        iyz="0.000120233649873037"
+        izz="0.000910673350926584" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.882352941176471 0.882352941176471 0.882352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 0.5716 -0.1157"
+      rpy="0 0 0" />
+    <parent
+      link="joint_3" />
+    <child
+      link="joint_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="54.0" lower="-6.2831853" upper="6.2831853" velocity="3.2"/>
+  </joint>
+  <link
+    name="joint_5">
+    <inertial>
+      <origin
+        xyz="-6.9891E-06 -0.0096701 0.0076024"
+        rpy="0 0 0" />
+      <mass
+        value="0.72955" />
+      <inertia
+        ixx="0.00098773"
+        ixy="-9.2864E-08"
+        ixz="1.0433E-07"
+        iyy="0.00087801"
+        iyz="-0.00012023"
+        izz="0.00091067" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.88235 0.88235 0.88235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 0.1157 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="joint_4" />
+    <child
+      link="joint_5" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="54.0" lower="-6.2831853" upper="6.2831853" velocity="3.2"/>
+  </joint>
+  <link
+    name="joint_6">
+    <inertial>
+      <origin
+        xyz="-2.50786895781548E-09 0.000920634085022742 -0.0174599361518346"
+        rpy="0 0 0" />
+      <mass
+        value="0.159510512804558" />
+      <inertia
+        ixx="8.16448253828859E-05"
+        ixy="-2.2350874971327E-11"
+        ixz="2.59504018597685E-12"
+        iyy="8.7757429927931E-05"
+        iyz="-4.96385228263279E-07"
+        izz="0.000149368424591008" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.882352941176471 0.882352941176471 0.882352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/joint_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0 -0.0922 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="joint_5" />
+    <child
+      link="joint_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="54.0" lower="-6.2831853" upper="6.2831853" velocity="3.2"/>
+  </joint>
+  <link
+    name="extender">
+    <inertial>
+      <origin
+        xyz="-1.0185E-14 0 0.0018925"
+        rpy="0 0 0" />
+      <mass
+        value="0.23217" />
+      <inertia
+        ixx="0.00027546"
+        ixy="-5.8937E-20"
+        ixz="-1.1738E-19"
+        iyy="0.00027546"
+        iyz="2.993E-20"
+        izz="0.00015802" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/extender.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/extender.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="extender"
+    type="fixed">
+    <origin
+      xyz="0 0 0.05"
+      rpy="0 0 0" />
+    <parent
+      link="joint_6" />
+    <child
+      link="extender" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="on_arm">
+    <inertial>
+      <origin
+        xyz="-9.91769365447983E-08 -0.0164847106043391 0.0115183959979581"
+        rpy="0 0 0" />
+      <mass
+        value="0.0595589251648015" />
+      <inertia
+        ixx="5.91989458400223E-05"
+        ixy="-3.18357470825513E-10"
+        ixz="3.5522541104858E-10"
+        iyy="4.21262712900486E-05"
+        iyz="8.15497210377909E-06"
+        izz="8.38357822158999E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/on_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/on_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="on_arm"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0499999749999999"
+      rpy="0 0 0" />
+    <parent
+      link="extender" />
+    <child
+      link="on_arm" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="3d_camera">
+    <inertial>
+      <origin
+        xyz="5.79338477567104E-06 -0.00160695396590849 -0.0547213296937247"
+        rpy="0 0 0" />
+      <mass
+        value="0.822162334011094" />
+      <inertia
+        ixx="0.000887813109505989"
+        ixy="-3.32926099241923E-09"
+        ixz="2.76966187694885E-07"
+        iyy="0.00243228488779323"
+        iyz="-9.11899623513406E-06"
+        izz="0.00186691525202536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/3d_camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/3d_camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3d_camera"
+    type="fixed">
+    <origin
+      xyz="0 -0.0906652250169711 0.0820082443646569"
+      rpy="0 0 0" />
+    <parent
+      link="on_arm" />
+    <child
+      link="3d_camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="on_arm2d_camera">
+    <inertial>
+      <origin
+        xyz="2.6363E-06 0.022925 0.014277"
+        rpy="0 0 0" />
+      <mass
+        value="0.071334" />
+      <inertia
+        ixx="4.643E-05"
+        ixy="-1.9242E-10"
+        ixz="-4.329E-10"
+        iyy="4.5064E-05"
+        iyz="-3.0312E-06"
+        izz="7.2451E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/on_arm2d_camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/on_arm2d_camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="on_arm2d_camera"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0123327954154533"
+      rpy="0 0 0" />
+    <parent
+      link="on_arm" />
+    <child
+      link="on_arm2d_camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="2d_camera">
+    <inertial>
+      <origin
+        xyz="-0.00076525 0.00056356 -0.15063"
+        rpy="0 0 0" />
+      <mass
+        value="0.28828" />
+      <inertia
+        ixx="0.00018187"
+        ixy="3.0125E-06"
+        ixz="-5.5483E-06"
+        iyy="0.00018677"
+        iyz="6.2097E-06"
+        izz="0.00023938" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/2d_camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://combination/meshes/2d_camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2d_camera"
+    type="fixed">
+    <origin
+      xyz="6.82819157894723E-05 0.102000176822406 0.189288678806898"
+      rpy="0 0 0" />
+    <parent
+      link="on_arm2d_camera" />
+    <child
+      link="2d_camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <transmission name="joint_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_1_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_2_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_3_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_4_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_5_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_6_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!-- <gazebo reference="world">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="joint_1">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="joint_2">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="joint_3">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="joint_4">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="joint_5">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="joint_6">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="extender">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="on_arm">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="3d_camera">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="on_arm2d_camera">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+  <gazebo reference="2d_camera">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo> -->
+</robot>
